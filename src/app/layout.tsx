@@ -27,8 +27,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bizloan Ops Query Model",
-  description: "Operations and Sales Dashboard for Bizloan Query Management",
+  title: "UAT- Bizloan Ops Query Model",
+  description: "Operations and Sales Dashboard for UAT- Bizloan Ops Query Model",
   manifest: "/manifest.json",
   icons: {
     icon: "/icon.png",
