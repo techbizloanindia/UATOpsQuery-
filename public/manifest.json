@@ -1,7 +1,7 @@
 {
-  "name": "Bizloan Ops Query Model",
-  "short_name": "Bizloan Ops",
-  "description": "Operations and Sales Dashboard for Bizloan Query Management",
+  "name": "UAT- Bizloan Ops Query Model",
+  "short_name": "UAT- Bizloan Ops",
+  "description": "Operations and Sales Dashboard for UAT- Bizloan Ops Query Model",
   "theme_color": "#0891b2",
   "background_color": "#ffffff",
   "display": "standalone",
