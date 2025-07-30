@@ -1,0 +1,220 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --primary: #0891b2;
+  --primary-light: #cffafe;
+  --primary-dark: #0e7490;
+  
+  /* New color variables */
+  --blue-primary: #2563eb;
+  --blue-light: #020508;
+  --blue-dark: #1e40af;
+  
+  --green-primary: #10b981;
+  --green-light: #d1fae5;
+  --green-dark: #047857;
+  
+  --purple-primary: #8b5cf6;
+  --purple-light: #ede9fe;
+  --purple-dark: #6d28d9;
+  
+  --amber-primary: #f59e0b;
+  --amber-light: #fef3c7;
+  --amber-dark: #d97706;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f172a;
+    --foreground: #f8fafc;
+    --primary: #06b6d4;
+    --primary-light: #67e8f9;
+    --primary-dark: #0891b2;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+button, .btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.3s ease-out forwards;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* No scrollbar class */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Card styles */
+.card {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Button variants */
+.btn-blue {
+  background-color: var(--blue-primary);
+}
+
+.btn-blue:hover {
+  background-color: var(--blue-dark);
+}
+
+.btn-green {
+  background-color: var(--green-primary);
+}
+
+.btn-green:hover {
+  background-color: var(--green-dark);
+}
+
+.btn-purple {
+  background-color: var(--purple-primary);
+}
+
+.btn-purple:hover {
+  background-color: var(--purple-dark);
+}
+
+.btn-amber {
+  background-color: var(--amber-primary);
+}
+
+.btn-amber:hover {
+  background-color: var(--amber-dark);
+}
+
+/* Make placeholder text black in AddQuery component */
+#query-list textarea::placeholder,
+#search-app-no::placeholder {
+  color: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+}
+
+/* Make text black in AddQuery component */
+#query-list textarea,
+#search-app-no,
+#send-case-to-dropdown,
+#send-case-to-dropdown option {
+  color: black;
+}
+
+/* Accordion styles */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+/* Chat bubble styles */
+.chat-bubble {
+  padding: 0.75rem;
+  border-radius: 1rem;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.chat-received {
+  background-color: #e2e8f0; /* slate-200 */
+  border-bottom-left-radius: 0.25rem;
+  align-self: flex-start;
+}
+
+.chat-sent {
+  background-color: #cffafe; /* cyan-100 */
+  border-bottom-right-radius: 0.25rem;
+  align-self: flex-end;
+}

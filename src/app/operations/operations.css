@@ -1,0 +1,379 @@
+/* Operations Dashboard Styles */
+
+.tab-active {
+  border-bottom-color: #0891b2; /* cyan-600 */
+  color: #0891b2;
+  font-weight: 600;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out forwards;
+}
+
+/* Fix text colors for inputs and textareas - ALL TEXT BLACK */
+input, 
+textarea, 
+select {
+  color: #000000 !important; /* pure black */
+  background-color: #ffffff !important; /* bg-white */
+  font-weight: 700 !important; /* font-bold */
+}
+
+input::placeholder, 
+textarea::placeholder {
+  color: #000000 !important; /* pure black */
+  opacity: 0.8 !important;
+  font-weight: 600 !important; /* font-semibold */
+}
+
+/* Search inputs - ALL BLACK TEXT */
+input[type="text"][placeholder*="Search"],
+input[type="text"][placeholder*="Enter App"],
+input[type="text"][placeholder*="application number"] {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+input[type="text"][placeholder*="Search"]::placeholder,
+input[type="text"][placeholder*="Enter App"]::placeholder,
+input[type="text"][placeholder*="application number"]::placeholder {
+  color: #000000 !important;
+  opacity: 0.7 !important;
+  font-weight: 600 !important;
+}
+
+/* Query textareas - ALL BLACK TEXT */
+textarea[placeholder*="Add a remark"],
+textarea[placeholder*="Enter query"],
+textarea[placeholder*="Type your"],
+textarea[placeholder*="Enter your remarks"] {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+  font-weight: 700 !important;
+  border: 2px solid #d1d5db !important;
+}
+
+textarea[placeholder*="Add a remark"]::placeholder,
+textarea[placeholder*="Enter query"]::placeholder,
+textarea[placeholder*="Type your"]::placeholder,
+textarea[placeholder*="Enter your remarks"]::placeholder {
+  color: #000000 !important;
+  opacity: 0.8 !important;
+  font-weight: 600 !important;
+}
+
+/* Select dropdowns - ALL BLACK TEXT */
+select, 
+select option {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* Responsive styles */
+@media (max-width: 640px) {
+  .tab {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .tab i, .tab svg {
+    margin-right: 0.25rem;
+  }
+
+  /* Make table responsive on mobile */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Stack flex items on mobile */
+  .flex-wrap-mobile {
+    flex-wrap: wrap;
+  }
+
+  /* Adjust spacing on mobile */
+  .space-y-mobile > * + * {
+    margin-top: 0.5rem;
+  }
+
+  /* Full width inputs on mobile */
+  .full-width-mobile {
+    width: 100%;
+  }
+}
+
+/* Hover effects */
+.query-block {
+  transition: all 0.2s ease;
+}
+
+.query-block:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Button styles */
+button.cyan-button {
+  background-color: #0891b2;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+button.cyan-button:hover {
+  background-color: #0e7490;
+}
+
+/* Table styles */
+.operations-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.operations-table th {
+  background-color: #f9fafb;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.operations-table td {
+  padding: 1rem;
+  vertical-align: top;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.operations-table tr:hover {
+  background-color: #f9fafb;
+}
+
+/* Form styles */
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  background-color: #f9fafb;
+  font-size: 0.875rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  color: #1f2937 !important;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #0891b2;
+  box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.1);
+}
+
+/* Badge styles */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.badge-yellow {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.badge-green {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.badge-cyan {
+  background-color: #cffafe;
+  color: #155e75;
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin-top: 0.25rem;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.dropdown-item:hover {
+  background-color: #f3f4f6;
+}
+
+/* Mobile optimizations */
+@media (max-width: 480px) {
+  .mobile-stack {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+
+  .mobile-stack > * {
+    width: 100%;
+    margin-right: 0 !important;
+    margin-bottom: 0.5rem;
+  }
+
+  .mobile-stack > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .mobile-full-width {
+    width: 100% !important;
+  }
+
+  .mobile-text-sm {
+    font-size: 0.875rem !important;
+  }
+
+  .mobile-p-2 {
+    padding: 0.5rem !important;
+  }
+
+  .mobile-mt-2 {
+    margin-top: 0.5rem !important;
+  }
+
+  .mobile-hidden {
+    display: none !important;
+  }
+}
+
+/* GLOBAL TEXT BLACK ENFORCEMENT - HIGHEST PRIORITY */
+/* All labels */
+label,
+.form-label,
+[for] {
+  color: #000000 !important; /* pure black */
+  font-weight: 700 !important; /* font-bold */
+}
+
+/* All input types */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"] {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* All text within modals */
+.fixed input,
+.fixed textarea,
+.fixed select,
+.modal input,
+.modal textarea,
+.modal select {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* All placeholders black */
+::placeholder {
+  color: #000000 !important;
+  opacity: 0.7 !important;
+  font-weight: 600 !important;
+}
+
+/* Form elements in any container */
+form input,
+form textarea,
+form select,
+form label {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+/* Specific component overrides */
+.bg-white input,
+.bg-white textarea,
+.bg-white select {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* Ensure all text is black in React components */
+input[class*="text-"],
+textarea[class*="text-"],
+select[class*="text-"] {
+  color: #000000 !important;
+}
+
+/* Override any gray text classes */
+.text-gray-900,
+.text-gray-800,
+.text-gray-700,
+.text-gray-600,
+.text-gray-500 {
+  color: #000000 !important;
+} 

@@ -1,0 +1,71 @@
+{
+  "name": "ops-query",
+  "version": "2.0.0",
+  "description": "OpsQuery - Real-time Query Management System for Financial Institutions",
+  "author": "OpsQuery Development Team",
+  "license": "MIT",
+  "keywords": [
+    "query-management",
+    "financial-institutions",
+    "real-time-messaging",
+    "dashboard",
+    "workflow-management",
+    "next.js",
+    "typescript",
+    "mongodb"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techbizloanindia/Ops_Queries.git"
+  },
+  "homepage": "https://github.com/techbizloanindia/Ops_Queries#readme",
+  "bugs": {
+    "url": "https://github.com/techbizloanindia/Ops_Queries/issues"
+  },
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "cross-env BUILDING=true next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "optimize-logo": "node scripts/optimize-logo.js",
+    "prepare": "npm run type-check && npm run lint",
+    "production-build": "cross-env NODE_ENV=production npm run build",
+    "analyze": "cross-env ANALYZE=true npm run build"
+  },
+  "engines": {
+    "node": ">=18.17.0",
+    "npm": ">=9.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server-github": "^2025.4.8",
+    "@tanstack/react-query": "^5.82.0",
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^17.2.0",
+    "lucide-react": "^0.525.0",
+    "mongodb": "^6.17.0",
+    "next": "15.3.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^4.11.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@tanstack/react-query-devtools": "^5.82.0",
+    "@types/bcryptjs": "^3.0.0",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "cross-env": "^7.0.3",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.5",
+    "sharp": "^0.32.6",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "typescript-eslint": "^8.36.0"
+  }
+}
